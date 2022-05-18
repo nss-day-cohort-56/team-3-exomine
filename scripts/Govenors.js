@@ -1,4 +1,4 @@
-import { getGovernors, setGovernor } from "./database.js";
+import { getGovernors } from "./database.js";
 
 const governors = getGovernors()
 
