@@ -37,12 +37,12 @@ const database = {
 
     ],
     mineralFacs: [
-            {id: 1, facilityId: 1, mineralId: 1, mineralname: "Uranium"},
-            {id: 2, facilityId: 1, mineralId: 2, mineralname: "Diamonds"},
-            {id: 3, facilityId: 2, mineralId: 3, mineralname: "Unobtanium"},
-            {id: 4, facilityId: 2, mineralId: 4, mineralname: "Adamantium"},
-            {id: 5, facilityId: 3, mineralId: 5, mineralname: "Bath Salts"},
-            {id: 6, facilityId: 3, mineralId: 6, mineralname: "Kryptonite"}
+            {id: 1, facilityId: 1, mineralId: 1, mineralName: "Uranium"},
+            {id: 2, facilityId: 1, mineralId: 2, mineralName: "Diamonds"},
+            {id: 3, facilityId: 2, mineralId: 3, mineralName: "Unobtanium"},
+            {id: 4, facilityId: 2, mineralId: 4, mineralName: "Adamantium"},
+            {id: 5, facilityId: 3, mineralId: 5, mineralName: "Bath Salts"},
+            {id: 6, facilityId: 3, mineralId: 6, mineralName: "Kryptonite"}
             
 
     ],
