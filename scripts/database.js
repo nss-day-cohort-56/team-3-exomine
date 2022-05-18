@@ -7,16 +7,6 @@ const database = {
         { id: 5, name: "Bath Salts"  },
         { id: 6, name: "Kryptonite"  }
     ],
-    // colonies: [
-    //     { id: 1, name: "Earth"},
-    //     { id: 2, name: "Mars"},
-    //     { id: 3, name: "Ceres"},
-    //     { id: 4, name: "Ganymede"},
-    //     { id: 5, name: "Uranus"},
-    //     { id: 6, name: "Europa"}
-
-    // ],
-
     governors: [
         { id: 1, name: "Arnold Schwarzenegger", active: true},
         { id: 2, name: "Elon Musk", active: true},
@@ -47,12 +37,12 @@ const database = {
 
     ],
     mineralFacs: [
-            {id: 1, facilityId: 1, mineralId: 1},
-            {id: 2, facilityId: 1, mineralId: 2},
-            {id: 3, facilityId: 2, mineralId: 3},
-            {id: 4, facilityId: 2, mineralId: 4},
-            {id: 5, facilityId: 3, mineralId: 5},
-            {id: 6, facilityId: 3, mineralId: 6},
+            {id: 1, facilityId: 1, mineralId: 1, mineralname: "Uranium"},
+            {id: 2, facilityId: 1, mineralId: 2, mineralname: "Diamonds"},
+            {id: 3, facilityId: 2, mineralId: 3, mineralname: "Unobtanium"},
+            {id: 4, facilityId: 2, mineralId: 4, mineralname: "Adamantium"},
+            {id: 5, facilityId: 3, mineralId: 5, mineralname: "Bath Salts"},
+            {id: 6, facilityId: 3, mineralId: 6, mineralname: "Kryptonite"}
             
 
     ],
