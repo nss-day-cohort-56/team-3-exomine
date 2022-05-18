@@ -15,10 +15,10 @@ const governors = getGovernors()
 // )
 
 export const governorSelect = () => {
-    let html = "<h2>Choose a </h2>"
+    let html = "<h2>Choose a Governor</h2>"
 
     html += '<select id="governor">'
-    html += '<option value="0">Governor</option>'
+    html += '<option value="0">Governors</option>'
 
     const govOptionsArray = governors.map( (governor) => {
             return `<option value="${governor.id}">${governor.name}</option>`
