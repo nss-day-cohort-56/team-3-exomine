@@ -1,50 +1,97 @@
 const database = {
     minerals: [
         { id: 1, name: "Uranium" },
-        { id: 2, name: "Diamonds"  },
-        { id: 3, name: "Unobtanium"  },
-        { id: 4, name: "Adamantium"  },
-        { id: 5, name: "Bath Salts"  },
-        { id: 6, name: "Kryptonite"  }
+        { id: 2, name: "Diamonds" },
+        { id: 3, name: "Unobtanium" },
+        { id: 4, name: "Adamantium" },
+        { id: 5, name: "Bath Salts" },
+        { id: 6, name: "Kryptonite" }
     ],
     governors: [
-        { id: 1, name: "Reanimated Arnold Schwarzenegger", active: true},
-        { id: 2, name: "The Ghola of Elon Musk", active: true},
-        { id: 3, name: "Jeff Bezo-Bot", active: true},
-        { id: 4, name: "Spike Spiegle", active: true},
-        { id: 5, name: "Mecha-Donald Trump", active: true},
-        { id: 6, name: "President Camacho", active: false},
-        { id: 7, name: "Malcom Reynolds", active: true},
-        { id: 8, name: "Jet Black", active: false},
-        { id: 9, name: "Zombie JFK", active: true}
+        { id: 1, name: "Reanimated Arnold Schwarzenegger", active: true },
+        { id: 2, name: "The Ghola of Elon Musk", active: true },
+        { id: 3, name: "Jeff Bezo-Bot", active: true },
+        { id: 4, name: "Spike Spiegle", active: true },
+        { id: 5, name: "Mecha-Donald Trump", active: true },
+        { id: 6, name: "President Camacho", active: false },
+        { id: 7, name: "Malcom Reynolds", active: true },
+        { id: 8, name: "Jet Black", active: false },
+        { id: 9, name: "Zombie JFK", active: true }
     ],
     facilities: [
-        {id: 1, name: "Asteroid Belt", active: true},
-        {id: 2, name: "Outer Planetary", active: true},
-        {id: 3, name: "Inner Planetary", active: false}
+        { id: 1, name: "Asteroid Belt", active: true },
+        { id: 2, name: "Outer Planetary", active: true },
+        { id: 3, name: "Inner Planetary", active: false }
 
     ],
+    colonies: [
+        {id: 1, name: "Earth"},
+        {id: 2, name: "Mars"},
+        {id: 3, name: "Ceres"},
+        {id: 4, name: "Ganymede"},
+        {id: 5, name: "Uranus"},
+        {id: 6, name: "Europa"},
+    ],
     govColonies: [
-        {id: 1, govId: 1, colonyId: 1, colonyName: "Earth"},
-        {id: 2, govId: 2, colonyId: 2, colonyName: "Mars"},
-        {id: 3, govId: 3, colonyId: 3, colonyName: "Ceres"},
-        {id: 4, govId: 4, colonyId: 4, colonyName: "Ganymede"},
-        {id: 5, govId: 5, colonyId: 5, colonyName: "Uranus"},
-        {id: 6, govId: 6, colonyId: 1, colonyName: "Earth"},
-        {id: 7, govId: 7, colonyId: 6, colonyName: "Europa"},
-        {id: 8, govId: 8, colonyId: 4, colonyName: "Ganymede"},
-        {id: 9, govId: 9, colonyId: 1, colonyName: "Earth"}
+        { id: 1, govId: 1, colonyId: 1, colonyName: "Earth" },
+        { id: 2, govId: 2, colonyId: 2, colonyName: "Mars" },
+        { id: 3, govId: 3, colonyId: 3, colonyName: "Ceres" },
+        { id: 4, govId: 4, colonyId: 4, colonyName: "Ganymede" },
+        { id: 5, govId: 5, colonyId: 5, colonyName: "Uranus" },
+        { id: 6, govId: 6, colonyId: 1, colonyName: "Earth" },
+        { id: 7, govId: 7, colonyId: 6, colonyName: "Europa" },
+        { id: 8, govId: 8, colonyId: 4, colonyName: "Ganymede" },
+        { id: 9, govId: 9, colonyId: 1, colonyName: "Earth" }
 
     ],
     mineralFacs: [
-            {id: 1, facilityId: 1, mineralId: 1, mineralName: "Uranium"},
-            {id: 2, facilityId: 1, mineralId: 2, mineralName: "Diamonds"},
-            {id: 3, facilityId: 2, mineralId: 3, mineralName: "Unobtanium"},
-            {id: 4, facilityId: 2, mineralId: 4, mineralName: "Adamantium"},
-            {id: 5, facilityId: 3, mineralId: 5, mineralName: "Bath Salts"},
-            {id: 6, facilityId: 3, mineralId: 6, mineralName: "Kryptonite"}
-            
+        { id: 1, facilityId: 1, mineralId: 1, mineralName: "Uranium", quantity: 0 },
+        { id: 2, facilityId: 1, mineralId: 2, mineralName: "Diamonds", quantity: 0 },
+        { id: 3, facilityId: 2, mineralId: 3, mineralName: "Unobtanium", quantity: 0 },
+        { id: 4, facilityId: 2, mineralId: 4, mineralName: "Adamantium", quantity: 0 },
+        { id: 5, facilityId: 3, mineralId: 5, mineralName: "Bath Salts", quantity: 0 },
+        { id: 6, facilityId: 3, mineralId: 6, mineralName: "Kryptonite", quantity: 0 }
+    ],
+    colonyStock: [
+        { id: 1, colonyId: 1, mineralId: 1, quantity: 0 },
+        { id: 2, colonyId: 1, mineralId: 2, quantity: 0 },
+        { id: 3, colonyId: 1, mineralId: 3, quantity: 0 },
+        { id: 4, colonyId: 1, mineralId: 4, quantity: 0 },
+        { id: 5, colonyId: 1, mineralId: 5, quantity: 0 },
+        { id: 6, colonyId: 1, mineralId: 6, quantity: 0 },
+        { id: 7, colonyId: 2, mineralId: 1, quantity: 0 },
+        { id: 8, colonyId: 2, mineralId: 2, quantity: 0 },
+        { id: 9, colonyId: 2, mineralId: 3, quantity: 0 },
+        { id: 10, colonyId: 2, mineralId: 4, quantity: 0 },
+        { id: 11, colonyId: 2, mineralId: 5, quantity: 0 },
+        { id: 12, colonyId: 2, mineralId: 6, quantity: 0 },
+        { id: 13, colonyId: 3, mineralId: 1, quantity: 0 },
+        { id: 14, colonyId: 3, mineralId: 2, quantity: 0 },
+        { id: 15, colonyId: 3, mineralId: 3, quantity: 0 },
+        { id: 16, colonyId: 3, mineralId: 4, quantity: 0 },
+        { id: 17, colonyId: 3, mineralId: 5, quantity: 0 },
+        { id: 18, colonyId: 3, mineralId: 6, quantity: 0 },
+        { id: 19, colonyId: 4, mineralId: 1, quantity: 0 },
+        { id: 20, colonyId: 4, mineralId: 2, quantity: 0 },
+        { id: 21, colonyId: 4, mineralId: 3, quantity: 0 },
+        { id: 22, colonyId: 4, mineralId: 4, quantity: 0 },
+        { id: 23, colonyId: 4, mineralId: 5, quantity: 0 },
+        { id: 24, colonyId: 4, mineralId: 6, quantity: 0 },
+        { id: 25, colonyId: 5, mineralId: 1, quantity: 0 },
+        { id: 26, colonyId: 5, mineralId: 2, quantity: 0 },
+        { id: 27, colonyId: 5, mineralId: 3, quantity: 0 },
+        { id: 28, colonyId: 5, mineralId: 4, quantity: 0 },
+        { id: 29, colonyId: 5, mineralId: 5, quantity: 0 },
+        { id: 30, colonyId: 5, mineralId: 6, quantity: 0 },
+        { id: 31, colonyId: 6, mineralId: 1, quantity: 0 },
+        { id: 32, colonyId: 6, mineralId: 2, quantity: 0 },
+        { id: 33, colonyId: 6, mineralId: 3, quantity: 0 },
+        { id: 34, colonyId: 6, mineralId: 4, quantity: 0 },
+        { id: 35, colonyId: 6, mineralId: 5, quantity: 0 },
+        { id: 36, colonyId: 6, mineralId: 6, quantity: 0 }
+        
 
+        
     ],
 
     transientState: {}
@@ -53,30 +100,37 @@ const database = {
 
 
 
-// purchases: [],
-//     customSales: [
-//         {
-//             id: 1,
-//             entreeId: 3,
-//             sideId: 2,
-//             veggieId: 3,
-//             timestamp: 1614659931693
-//         }
-//     ],
+
 
 export const setFacility = (facilityId) => {
     database.transientState.selectedFacility = facilityId
-    document.dispatchEvent( new CustomEvent("stateChanged") )
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+}
+
+export const getMinerals = () => {
+    return database.minerals.map(mineral => ({ ...mineral }))
+}
+
+export const getGovernors = () => {
+    return database.governors.map(governor => ({ ...governor }))
 }
 
 export const getFacilities = () => {
-    return database.facilities.map(f => ({...f}))
+    return database.facilities.map(facility => ({ ...facility }))
+}
+
+export const getGovColonies = () => {
+    return database.govColonies.map(govColony => ({ ...govColony }))
+}
+
+export const getMineralFacs = () => {
+    return database.mineralFacs.map(mineralFac => ({ ...mineralFac }))
 }
 
 export const purchaseMineral = () => {
 
-        // Broadcast custom event to entire documement so that the
-        // application can re-render and update state
-        document.dispatchEvent( new CustomEvent("stateChanged") )
-    }
+    // Broadcast custom event to entire documement so that the
+    // application can re-render and update state
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+}
 

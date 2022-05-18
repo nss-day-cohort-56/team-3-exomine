@@ -1,0 +1,1 @@
+import { getGovernors, getGovColonies } from "./database.js";
