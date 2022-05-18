@@ -8,12 +8,12 @@ const database = {
         { id: 6, name: "Kryptonite"  }
     ],
     governors: [
-        { id: 1, name: "Arnold Schwarzenegger", active: true},
-        { id: 2, name: "Elon Musk", active: true},
+        { id: 1, name: "Reanimated Arnold Schwarzenegger", active: true},
+        { id: 2, name: "The Ghola of Elon Musk", active: true},
         { id: 3, name: "Jeff Bezo-Bot", active: true},
         { id: 4, name: "Spike Spiegle", active: true},
         { id: 5, name: "Mecha-Donald Trump", active: true},
-        { id: 6, name: "Camacho", active: false},
+        { id: 6, name: "President Camacho", active: false},
         { id: 7, name: "Malcom Reynolds", active: true},
         { id: 8, name: "Jet Black", active: false},
         { id: 9, name: "Zombie JFK", active: true}
