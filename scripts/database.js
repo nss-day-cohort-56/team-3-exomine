@@ -90,10 +90,6 @@ const database = {
 
 
 
-export const setFacility = (facilityId) => {
-    database.transientState.selectedFacility = facilityId
-    document.dispatchEvent(new CustomEvent("stateChanged"))
-}
 
 export const getMinerals = () => {
     return database.minerals.map(mineral => ({ ...mineral }))
@@ -115,6 +111,14 @@ export const getMineralFacs = () => {
     return database.mineralFacs.map(mineralFac => ({ ...mineralFac }))
 }
 
+export const setFacility = (facilityId) => {
+    database.transientState.selectedFacility = facilityId
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+}
+export const setGovernor = (governorId) => {
+    database.transientState.selectedGovernor = governorId
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+}
 export const purchaseMineral = () => {
 
     // Broadcast custom event to entire documement so that the
