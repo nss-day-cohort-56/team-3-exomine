@@ -1,18 +1,17 @@
-import { getGovernors } from "./database.js";
+import { getGovernors, setGovernor } from "./database.js";
 
 const governors = getGovernors()
 
 
-// document.addEventListener(
-//     "change",
-//     (changeEvent) => {
-//         if (changeEvent.target.id === "governor") {
-//             setGovernor(parseInt(changeEvent.target.value))
-//             // const chosenOption = changeEvent.target.value
-//             // console.log(chosenOption)  // "1" or "2"
-//         }
-//     }
-// )
+document.addEventListener(
+    "change",
+    (changeEvent) => {
+        if (changeEvent.target.id === "governor") {
+            setGovernor(parseInt(changeEvent.target.value))
+            console.log("taco")
+        }
+    }
+)
 
 export const governorSelect = () => {
     let html = "<h2>Choose a Governor</h2>"
