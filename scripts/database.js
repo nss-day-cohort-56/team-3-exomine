@@ -8,15 +8,15 @@ const database = {
         { id: 6, name: "Kryptonite" }
     ],
     governors: [
-        { id: 1, name: "Reanimated Arnold Schwarzenegger", active: true },
-        { id: 2, name: "The Ghola of Elon Musk", active: true },
-        { id: 3, name: "Jeff Bezo-Bot", active: true },
-        { id: 4, name: "Spike Spiegle", active: true },
-        { id: 5, name: "Mecha-Donald Trump", active: true },
-        { id: 6, name: "President Camacho", active: false },
-        { id: 7, name: "Malcom Reynolds", active: true },
-        { id: 8, name: "Jet Black", active: false },
-        { id: 9, name: "Zombie JFK", active: true }
+        { id: 1, name: "Reanimated Arnold Schwarzenegger", colonyId: 1, active: true },
+        { id: 2, name: "The Ghola of Elon Musk", colonyId: 2, active: true },
+        { id: 3, name: "Jeff Bezo-Bot", colonyId: 3, active: true },
+        { id: 4, name: "Spike Spiegle", colonyId: 4, active: true },
+        { id: 5, name: "Mecha-Donald Trump", colonyId: 5, active: true },
+        { id: 6, name: "President Camacho", colonyId: 1, active: false },
+        { id: 7, name: "Malcom Reynolds", cololnyId: 6, active: true },
+        { id: 8, name: "Jet Black", cololnyId: 4, active: false },
+        { id: 9, name: "Zombie JFK", cololnyId: 1, active: true }
     ],
     facilities: [
         { id: 1, name: "Asteroid Belt", active: true },
@@ -32,26 +32,17 @@ const database = {
         {id: 5, name: "Uranus"},
         {id: 6, name: "Europa"},
     ],
-    govColonies: [
-        { id: 1, govId: 1, colonyId: 1, colonyName: "Earth" },
-        { id: 2, govId: 2, colonyId: 2, colonyName: "Mars" },
-        { id: 3, govId: 3, colonyId: 3, colonyName: "Ceres" },
-        { id: 4, govId: 4, colonyId: 4, colonyName: "Ganymede" },
-        { id: 5, govId: 5, colonyId: 5, colonyName: "Uranus" },
-        { id: 6, govId: 6, colonyId: 1, colonyName: "Earth" },
-        { id: 7, govId: 7, colonyId: 6, colonyName: "Europa" },
-        { id: 8, govId: 8, colonyId: 4, colonyName: "Ganymede" },
-        { id: 9, govId: 9, colonyId: 1, colonyName: "Earth" }
-
-    ],
     mineralFacs: [
-        { id: 1, facilityId: 1, mineralId: 1, mineralName: "Uranium", quantity: 0 },
-        { id: 2, facilityId: 1, mineralId: 2, mineralName: "Diamonds", quantity: 0 },
-        { id: 3, facilityId: 2, mineralId: 3, mineralName: "Unobtanium", quantity: 0 },
-        { id: 4, facilityId: 2, mineralId: 4, mineralName: "Adamantium", quantity: 0 },
-        { id: 5, facilityId: 3, mineralId: 5, mineralName: "Bath Salts", quantity: 0 },
-        { id: 6, facilityId: 3, mineralId: 6, mineralName: "Kryptonite", quantity: 0 }
-    ],
+        { id: 1, facilityId: 1, mineralId: 1, quantity: 0 },
+        { id: 2, facilityId: 1, mineralId: 2, quantity: 0 },
+        { id: 3, facilityId: 2, mineralId: 3, quantity: 0 },
+        { id: 4, facilityId: 2, mineralId: 4, quantity: 0 },
+        { id: 5, facilityId: 3, mineralId: 5, quantity: 0 },
+        { id: 6, facilityId: 3, mineralId: 6, quantity: 0 },
+        { id: 7, facilityId: 1, mineralId: 4, quantity: 0 },
+        { id: 8, facilityId: 2, mineralId: 6, quantity: 0 },
+        { id: 9, facilityId: 3, mineralId: 1, quantity: 0 },
+    ],    
     colonyStock: [
         { id: 1, colonyId: 1, mineralId: 1, quantity: 0 },
         { id: 2, colonyId: 1, mineralId: 2, quantity: 0 },
@@ -88,10 +79,7 @@ const database = {
         { id: 33, colonyId: 6, mineralId: 3, quantity: 0 },
         { id: 34, colonyId: 6, mineralId: 4, quantity: 0 },
         { id: 35, colonyId: 6, mineralId: 5, quantity: 0 },
-        { id: 36, colonyId: 6, mineralId: 6, quantity: 0 }
-        
-
-        
+        { id: 36, colonyId: 6, mineralId: 6, quantity: 0 } 
     ],
 
     transientState: {}
