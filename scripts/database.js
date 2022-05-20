@@ -43,7 +43,7 @@ const database = {
         { id: 8, facilityId: 2, mineralId: 6, quantity: 0 },
         { id: 9, facilityId: 3, mineralId: 1, quantity: 0 },
     ],    
-    colonyStock: [
+    colonyStocks: [
         { id: 1, colonyId: 1, mineralId: 1, quantity: 0 },
         { id: 2, colonyId: 1, mineralId: 2, quantity: 0 },
         { id: 3, colonyId: 1, mineralId: 3, quantity: 0 },
@@ -109,6 +109,9 @@ export const getGovColonies = () => {
 
 export const getMineralFacs = () => {
     return database.mineralFacs.map(mineralFac => ({ ...mineralFac }))
+}
+export const getColonyStocks = () => {
+    return database.colonyStocks.map(colonyStock => ({ ...colonyStock }))
 }
 
 export const getTransient = () => {
