@@ -14,4 +14,4 @@ export const facilitiesDropDown = () => {
     html += facilityOptionArray.join("")
     html += "</select>"
     return html
-}
+} 
