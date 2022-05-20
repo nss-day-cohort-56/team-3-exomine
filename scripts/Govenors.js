@@ -1,4 +1,4 @@
-import { getGovernors, setGovernor } from "./database.js";
+import { getGovernors, setGovernorColony } from "./database.js";
 
 const governors = getGovernors()
 
@@ -7,8 +7,8 @@ document.addEventListener(
     "change",
     (changeEvent) => {
         if (changeEvent.target.id === "governor") {
-            setGovernor(parseInt(changeEvent.target.value))
-            console.log("taco")
+            setGovernorColony(parseInt(changeEvent.target.value))
+           
         }
     }
 )
@@ -20,7 +20,7 @@ export const governorSelect = () => {
     html += '<option value="0">Governors</option>'
 
     const govOptionsArray = governors.map( (governor) => {
-            return `<option value="${governor.id}">${governor.name}</option>`
+            return `<option value="${governor.colonyId}">${governor.name}</option>`
         }
     )
 

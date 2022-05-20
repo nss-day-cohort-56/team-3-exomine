@@ -14,9 +14,9 @@ const database = {
         { id: 4, name: "Spike Spiegle", colonyId: 4, active: true },
         { id: 5, name: "Mecha-Donald Trump", colonyId: 5, active: true },
         { id: 6, name: "President Camacho", colonyId: 1, active: false },
-        { id: 7, name: "Malcom Reynolds", cololnyId: 6, active: true },
-        { id: 8, name: "Jet Black", cololnyId: 4, active: false },
-        { id: 9, name: "Zombie JFK", cololnyId: 1, active: true }
+        { id: 7, name: "Malcom Reynolds", colonyId: 6, active: true },
+        { id: 8, name: "Jet Black", colonyId: 4, active: false },
+        { id: 9, name: "Zombie JFK", colonyId: 1, active: true }
     ],
     facilities: [
         { id: 1, name: "Asteroid Belt", active: true },
@@ -111,12 +111,19 @@ export const getMineralFacs = () => {
     return database.mineralFacs.map(mineralFac => ({ ...mineralFac }))
 }
 
+export const getTransient = () => {
+    return {...database.transientState} 
+}
+
+
+
+
 export const setFacility = (facilityId) => {
     database.transientState.selectedFacility = facilityId
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
-export const setGovernor = (governorId) => {
-    database.transientState.selectedGovernor = governorId
+export const setGovernorColony = (governorColonyId) => {
+    database.transientState.selectedGovernorColony = governorColonyId
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 export const purchaseMineral = () => {
