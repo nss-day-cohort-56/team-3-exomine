@@ -1,3 +1,4 @@
+import { colonyHTML } from "./colonies.js"
 import { facilitiesDropDown } from "./facilities.js"
 import {governorSelect} from "./Govenors.js"
 export const Exomine = () => {
@@ -14,12 +15,17 @@ export const Exomine = () => {
            ${facilitiesDropDown()}
         
         </section>
+        </article>
+        <article class="colonyStockContainer">
+        <section class="colonyName">
+        ${colonyHTML()}
+        </section>
+        </article>
         <section class="choices__minerals">
             <h2>Minerals</h2>
   
         </section>
-    </article>
-
+  
 
     <article>
             <button id="purchase">Purchase Selected Minerals</button>
