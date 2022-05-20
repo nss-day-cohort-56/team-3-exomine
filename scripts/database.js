@@ -115,7 +115,9 @@ export const getTransient = () => {
     return {...database.transientState} 
 }
 
-
+export const getColonies = () => {
+    return database.colonies.map(colony => ({ ...colony }))
+}
 
 
 export const setFacility = (facilityId) => {
