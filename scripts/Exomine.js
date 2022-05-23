@@ -2,6 +2,7 @@ import { colonyHTML } from "./colonies.js"
 import { facilitiesDropDown } from "./facilities.js"
 import {governorSelect} from "./Govenors.js" 
 import { colonyStockHTML } from "./colonyStock.js"
+
 export const Exomine = () => {
     return `
         <header class="header">

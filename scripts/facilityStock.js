@@ -1,6 +1,6 @@
 import { setFacility } from "./database.js"
-
-
+import {facilitiesDropDown} from "./database.js"
+const facilityDropDown = facilitiesDropDown()
 
 
 document.addEventListener(
