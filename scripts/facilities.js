@@ -9,9 +9,9 @@ document.addEventListener(
     )
     
     export const facilitiesDropDown = () => {
+        const transient = getTransient()
         let html = "<h2>Choose a Facility </h2>"
         html += `<select id="facilitiesOption">`
-        const transient = getTransient()
         if (transient.selectedGovernorColony === undefined) {
         html += '<option value="0">Facilities</option>'
     }
