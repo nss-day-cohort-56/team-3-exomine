@@ -3,6 +3,8 @@ import { facilitiesDropDown } from "./facilities.js"
 import { governorSelect } from "./Govenors.js"
 import { colonyStockHTML } from "./colonyStock.js"
 import { facilityStockHTML } from "./facilityStock.js"
+import { cartHTML } from "./cart.js"
+
 
 export const Exomine = () => {
     return `
@@ -34,6 +36,9 @@ export const Exomine = () => {
     </article>
 
     <article>
+        <section class="cart">
+        ${cartHTML()}
+        </section>
             <button id="purchase">Purchase Selected Minerals</button>
     </article>
 
