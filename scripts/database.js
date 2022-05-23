@@ -124,8 +124,8 @@ export const getTransient = () => {
 
 
 
-export const setMineral = (mineralId) => {
-    database.transientState.selectedMineral = mineralId
+export const setMineral = (minFacId) => {
+    database.transientState.selectedMineral = minFacId
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 

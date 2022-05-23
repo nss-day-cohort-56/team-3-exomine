@@ -14,6 +14,17 @@ document.addEventListener(
         }
     }
 )
+
+// document.addEventListener(
+//     "change",
+//     (changeEvent) => {
+//         if (changeEvent.target.id === "mineralOptions") {
+//             cartHTML(changeEvent.target.value)
+           
+//         }
+//     }
+// )
+
 export const facilityStockHTML = () => {
     const transient = getTransient()
     const minerals = getMinerals()
@@ -26,7 +37,7 @@ export const facilityStockHTML = () => {
         (facilityMineral) => {
             for (const mineral of minerals) {
                 if (facilityMineral.mineralId === mineral.id) {
-                    return `<li> <input id="mineralOptions"type="radio" name"mineral" value="${mineral.id}"/> ${mineral.name} ${facilityMineral.quantity}</li>`
+                    return `<li> <input id="mineralOptions"type="radio" name"mineral" value="${facilityMineral.id}"/> ${mineral.name} ${facilityMineral.quantity}</li>`
                 }
             }
         })
