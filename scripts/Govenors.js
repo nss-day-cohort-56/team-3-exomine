@@ -19,7 +19,8 @@ export const governorSelect = () => {
     html += '<select id="governor">'
     html += '<option value="0">Governors</option>'
 
-    const govOptionsArray = governors.map( (governor) => {
+    const govOptionsArray = governors.map( 
+        (governor) => {
             return `<option value="${governor.colonyId}">${governor.name}</option>`
         }
     )
