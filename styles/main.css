@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+
+* {
+    /* border-radius: 1px;
+    border: 1px dashed goldenrod; */
+    
+    font-family: "Comfortaa", Arial, sans-serif;
+    background-color: rgb(241, 241, 241);
+    padding: .25rem;
+    
+    
+}
+.header {
+    /* border: 1px dashed goldenrod; */
+    text-align: center;
+}
+
+.govatar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.choices {
+    flex-grow: 3;
+    /* border: 1px dashed blue; */
+} 
+
+.colonyStockContainer {
+    flex-grow: 1;
+}
+
+.top {
+    /* border: 1px dashed black; */
+    /* box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-content: space-between;
+    padding: 2rem;
+    
+}
+
+.bottom {
+    /* border: 1px dashed green; */
+    /* box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.facilityMin {
+    border: 1px dashed black;
+    padding: 2rem;
+    flex-grow: 3;
+    margin: 1rem;
+}
+.cartButton {
+    border: 1px dashed turquoise;
+    padding: 2rem;
+    flex-grow: 1;
+    margin: 1rem;
+}
+
+/* .cart {
+    border: 1px dashed red;
+    
+}
+
+.choices__minerals {
+    border: 1px dashed purple;
+    
+} */
+
+.pic {
+    height: 100px;
+    width: 100px;
+}
+
+
+#purchase {
+    display: flex;
+    justify-content: center;
+    /* margin: 1rem 0 2rem 2rem; */
+    padding: 0.5rem;
+    background-color: rgb(72, 139, 227);
+    color: lightgoldenrodyellow;
+    font-size: 1rem;
+
+}

@@ -10,7 +10,7 @@ const database = {
     governors: [
         { id: 1, name: "Reanimated Arnold Schwarzenegger", colonyId: 1, active: true, avatar: "../images/Avatars/ShwartzIsAsBigAsMine.png" },
         { id: 2, name: "The Ghola of Elon Musk", colonyId: 2, active: true, avatar: "../images/Avatars/Musk.png" },
-        { id: 3, name: "Jeff Bezo-Bot", colonyId: 3, active: true, avatar: "../images/Avatars/Bezps.png" },
+        { id: 3, name: "Jeff Bezo-Bot", colonyId: 3, active: true, avatar: "../images/Avatars/Bezos.png" },
         { id: 4, name: "Spike Spiegle", colonyId: 4, active: true, avatar: "../images/Avatars/Spike.png" },
         { id: 5, name: "Mecha-Donald Trump", colonyId: 5, active: true, avatar: "../images/Avatars/FlamingShit.png" },
         { id: 6, name: "President Camacho", colonyId: 1, active: false, avatar: "../images/Avatars/Camacho.png" },
