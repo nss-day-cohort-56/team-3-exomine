@@ -10,7 +10,7 @@ document.addEventListener(
     (changeEvent) => {
         if (changeEvent.target.id === "mineralOptions") {
             setMineral(parseInt(changeEvent.target.value))
-           
+
         }
     }
 )
@@ -20,24 +20,26 @@ document.addEventListener(
 //     (changeEvent) => {
 //         if (changeEvent.target.id === "mineralOptions") {
 //             cartHTML(changeEvent.target.value)
-           
+
 //         }
 //     }
 // )
 
 export const facilityStockHTML = () => {
+    const mineralFacilities = getMineralFacs()
     const transient = getTransient()
     const minerals = getMinerals()
-    const mineralFacilities = getMineralFacs()
     const filteredFacilityMinerals = mineralFacilities.filter(facilityMineral => facilityMineral.facilityId === transient.selectedFacility)
 
     let html = "<h2> Available Minerals</h2>"
-        html += "<ul>"
+    html += "<ul>"
     const mineralStockArray = filteredFacilityMinerals.map(
         (facilityMineral) => {
             for (const mineral of minerals) {
                 if (facilityMineral.mineralId === mineral.id) {
-                    return `<li> <input id="mineralOptions"type="radio" name"mineral" value="${facilityMineral.id}"/> ${mineral.name} ${facilityMineral.quantity}</li>`
+                    if (facilityMineral.quantity !== 0) {
+                        return `<li> <input id="mineralOptions"type="radio" name"mineral" value="${facilityMineral.id}"/>${facilityMineral.quantity} tons of ${mineral.name} </li>`
+                    }
                 }
             }
         })
