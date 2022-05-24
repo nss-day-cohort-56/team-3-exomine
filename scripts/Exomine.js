@@ -4,7 +4,18 @@ import { governorSelect } from "./Govenors.js"
 import { colonyStockHTML } from "./colonyStock.js"
 import { facilityStockHTML } from "./facilityStock.js"
 import { cartHTML } from "./cart.js"
+import { spacePurchase } from "./database.js"
 
+document.addEventListener(
+    "click",
+    (clickEvent) => {
+        const itemClicked = clickEvent.target
+        if (itemClicked.id === "purchase") {
+            spacePurchase()
+        }
+
+    }
+)
 
 export const Exomine = () => {
     return `
@@ -21,15 +32,15 @@ export const Exomine = () => {
         
         </section>
     </article>
-     <article class="colonyStockContainer">
+    <article class="colonyStockContainer">
         <section class="colonyName">
         ${colonyHTML()}
         ${colonyStockHTML()}
         </section>
-     </article>
-     </article>
-     <article class="bottom">
-     <article>
+    </article>
+    </article>
+    <article class="bottom">
+    <article>
         <section class="choices__minerals">
          ${facilityStockHTML()}
         </section>
@@ -39,13 +50,8 @@ export const Exomine = () => {
         <section class="cart">
         ${cartHTML()}
         </section>
+
             <button id="purchase">Purchase Selected Minerals</button>
     </article>
-
-    <article class="customerOrders">
-            <h2>Mineral Sales</h2>
-     
-     </article>
-     </article>
     `
 }
