@@ -5,6 +5,7 @@ import { colonyStockHTML } from "./colonyStock.js"
 import { facilityStockHTML } from "./facilityStock.js"
 import { cartHTML } from "./cart.js"
 import { spacePurchase } from "./database.js"
+import { avatarHTML } from "./avatar.js"
 
 document.addEventListener(
     "click",
@@ -53,5 +54,6 @@ export const Exomine = () => {
 
             <button id="purchase">Purchase Selected Minerals</button>
     </article>
+    ${avatarHTML()}
     `
 }

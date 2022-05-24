@@ -1,4 +1,4 @@
-import { getGovernors, setGovernorColony } from "./database.js";
+import { getGovernors, setGovernor, setGovernorColony } from "./database.js";
 
 const governors = getGovernors()
 
@@ -6,9 +6,19 @@ const governors = getGovernors()
 document.addEventListener(
     "change",
     (changeEvent) => {
-        if (changeEvent.target.id === "governor") {
-            setGovernorColony(parseInt(changeEvent.target.value))
-           
+        if (changeEvent.target.name === "governor") {
+         const [colonyId, governorId] = changeEvent.target.value.split("--")
+            setGovernorColony(parseInt(colonyId))
+            setGovernor(parseInt(governorId))
+            
+        }
+    }
+)
+document.addEventListener(
+    "click",
+    (clickEvent) => {
+        if (clickEvent.target.name === "governorOption") {
+
         }
     }
 )
@@ -16,12 +26,12 @@ document.addEventListener(
 export const governorSelect = () => {
     let html = "<h2>Choose a Governor</h2>"
 
-    html += '<select id="governor">'
+    html += '<select name="governor">'
     html += '<option value="0">Governors</option>'
 
-    const govOptionsArray = governors.map( 
+    const govOptionsArray = governors.map(
         (governor) => {
-            return `<option value="${governor.colonyId}">${governor.name}</option><img src="${governor.avatar}" alt="image"/>`
+            return `<option name="governorOption"  value="${governor.colonyId}--${governor.id}">${governor.name}</option><img src="${governor.avatar}" alt="image"/>`
         }
     )
 
