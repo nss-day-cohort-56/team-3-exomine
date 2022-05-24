@@ -154,6 +154,7 @@ export const spacePurchase = () => {
                 }
         }
     }
+    database.transientState.selectedMineral = undefined
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
         // if transient.selectedMineral === mineralFacility.id
