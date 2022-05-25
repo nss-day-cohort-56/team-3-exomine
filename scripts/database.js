@@ -8,15 +8,15 @@ const database = {
         { id: 6, name: "Kryptonite" }
     ],
     governors: [
-        { id: 1, name: "Reanimated Arnold Schwarzenegger", colonyId: 1, active: true, avatar: "../images/Avatars/ShwartzIsAsBigAsMine.png" },
-        { id: 2, name: "The Ghola of Elon Musk", colonyId: 2, active: true, avatar: "../images/Avatars/Musk.png" },
-        { id: 3, name: "Jeff Bezo-Bot", colonyId: 3, active: true, avatar: "../images/Avatars/Bezos.png" },
-        { id: 4, name: "Spike Spiegle", colonyId: 4, active: true, avatar: "../images/Avatars/Spike.png" },
-        { id: 5, name: "Mecha-Donald Trump", colonyId: 5, active: true, avatar: "../images/Avatars/FlamingShit.png" },
-        { id: 6, name: "President Camacho", colonyId: 1, active: false, avatar: "../images/Avatars/Camacho.png" },
-        { id: 7, name: "Malcom Reynolds", colonyId: 6, active: true, avatar: "../images/Avatars/MalcomReynolds.png" },
-        { id: 8, name: "Jet Black", colonyId: 4, active: false, avatar: "../images/Avatars/Jet.png" },
-        { id: 9, name: "Zombie JFK", colonyId: 1, active: true, avatar: "../images/Avatars/JFK.png" }
+        { id: 1, name: "Reanimated Arnold Schwarzenegger", colonyId: 1, active: true, avatar: "https://raw.githubusercontent.com/nss-day-cohort-56/team-3-exomine/main/images/Avatars/ShwartzIsAsBigAsMine.png" },
+        { id: 2, name: "The Ghola of Elon Musk", colonyId: 2, active: true, avatar: "https://raw.githubusercontent.com/nss-day-cohort-56/team-3-exomine/main/images/Avatars/Musk.png" },
+        { id: 3, name: "Jeff Bezo-Bot", colonyId: 3, active: true, avatar: "https://raw.githubusercontent.com/nss-day-cohort-56/team-3-exomine/main/images/Avatars/Bezos.png" },
+        { id: 4, name: "Spike Spiegle", colonyId: 4, active: true, avatar: "https://raw.githubusercontent.com/nss-day-cohort-56/team-3-exomine/main/images/Avatars/Spike.png" },
+        { id: 5, name: "Mecha-Donald Trump", colonyId: 5, active: true, avatar: "https://raw.githubusercontent.com/nss-day-cohort-56/team-3-exomine/main/images/Avatars/FlamingShit.png" },
+        { id: 6, name: "President Camacho", colonyId: 1, active: false, avatar: "https://raw.githubusercontent.com/nss-day-cohort-56/team-3-exomine/main/images/Avatars/Camacho.png" },
+        { id: 7, name: "Malcom Reynolds", colonyId: 6, active: true, avatar: "https://raw.githubusercontent.com/nss-day-cohort-56/team-3-exomine/main/images/Avatars/MalcomReynolds.png" },
+        { id: 8, name: "Jet Black", colonyId: 4, active: false, avatar: "https://raw.githubusercontent.com/nss-day-cohort-56/team-3-exomine/main/images/Avatars/Jet.png" },
+        { id: 9, name: "Zombie JFK", colonyId: 1, active: true, avatar: "https://raw.githubusercontent.com/nss-day-cohort-56/team-3-exomine/main/images/Avatars/JFK.png" }
     ],
     facilities: [
         { id: 1, name: "Asteroid Belt", active: true },
