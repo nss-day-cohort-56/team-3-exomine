@@ -13,6 +13,7 @@
 .header {
     /* border: 1px dashed goldenrod; */
     text-align: center;
+    font-size: xx-large;
 }
 
 .govatar {
@@ -76,8 +77,11 @@
 } */
 
 .pic {
-    height: 100px;
-    width: 100px;
+    height: 225px;
+    width: 225px;
+    border-radius: 1rem;
+    /* border: dashed turquoise; */
+    box-shadow: 0.15rem 0.15rem 0.25rem rgb(143, 143, 143);
 }
 
 

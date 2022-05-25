@@ -21,7 +21,7 @@ document.addEventListener(
 export const Exomine = () => {
     return `
         <header class="header">
-            <h1 class="title">Khajit's Mineral Emporium</h1>
+            <h1 class="title">😻Khajit's Mineral Emporium😻</h1>
         </header>
      <article class="top">
      <article class="choices">

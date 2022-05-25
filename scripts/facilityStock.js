@@ -31,7 +31,7 @@ export const facilityStockHTML = () => {
     const minerals = getMinerals()
     const filteredFacilityMinerals = mineralFacilities.filter(facilityMineral => facilityMineral.facilityId === transient.selectedFacility)
 
-    let html = "<h2> Available Minerals</h2>"
+    let html = "<h2>Facility Minerals</h2>"
     html += ""
     const mineralStockArray = filteredFacilityMinerals.map(
         (facilityMineral) => {

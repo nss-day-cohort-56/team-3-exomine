@@ -27,7 +27,7 @@ document.addEventListener(
         html += '<option value="0">Facilities</option>'
         const facilityOptionArray = facilities.map(
             (facility) => {
-                return `<option id="facility" value="${facility.id}"/> ${facility.name} 
+                return `<option id="facility" ${facility.id === transient.selectedFacility? "selected": "" } value="${facility.id}"/> ${facility.name} 
             </option>`
             }
         )
