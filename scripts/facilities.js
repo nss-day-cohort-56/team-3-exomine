@@ -1,4 +1,4 @@
-import { getFacilities, getTransient, setFacility } from "./database.js";
+import { getFacilities, getTransient, setFacilityId, setFacilityName } from "./database.js";
 const facilities = getFacilities()
 document.addEventListener(
     "change",
@@ -11,7 +11,9 @@ document.addEventListener(
         "change",
         (changeEvent) => {
             if (changeEvent.target.id === "facilitiesOption") {
-                setFacility(parseInt(changeEvent.target.value))
+                const [facilityId, facilityName] = changeEvent.target.value.split("--")
+                setFacilityId(parseInt(facilityId))
+                setFacilityName(facilityName)
                
             }
         }
@@ -27,7 +29,7 @@ document.addEventListener(
         html += '<option value="0">Facilities</option>'
         const facilityOptionArray = facilities.map(
             (facility) => {
-                return `<option id="facility" ${facility.id === transient.selectedFacility? "selected": "" } value="${facility.id}"/> ${facility.name} 
+                return `<option id="facility" ${facility.id === transient.selectedFacility? "selected": "" } value="${facility.id}--${facility.name}"/> ${facility.name} 
             </option>`
             }
         )

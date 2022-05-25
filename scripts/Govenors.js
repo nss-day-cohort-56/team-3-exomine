@@ -1,4 +1,4 @@
-import { getGovernors, setGovernor, setGovernorColony } from "./database.js";
+import { getGovernors, setGovernor, setGovernorColony, getTransient } from "./database.js";
 
 const governors = getGovernors()
 
@@ -28,10 +28,10 @@ export const governorSelect = () => {
 
     html += '<select name="governor">'
     html += '<option value="0">Governors</option>'
-
+    const transient = getTransient()
     const govOptionsArray = governors.map(
         (governor) => {
-            return `<option value="${governor.colonyId}--${governor.id}">${governor.name}</option><img src="${governor.avatar}" alt="image"/>`
+            return `<option ${governor.id === transient.selectedGovernor? "selected": "" } value="${governor.colonyId}--${governor.id}">${governor.name}</option><img src="${governor.avatar}" alt="image"/>`
         }
     )
 
