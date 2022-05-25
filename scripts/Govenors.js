@@ -31,7 +31,7 @@ export const governorSelect = () => {
 
     const govOptionsArray = governors.map(
         (governor) => {
-            return `<option name="governorOption"  value="${governor.colonyId}--${governor.id}">${governor.name}</option><img src="${governor.avatar}" alt="image"/>`
+            return `<option value="${governor.colonyId}--${governor.id}">${governor.name}</option><img src="${governor.avatar}" alt="image"/>`
         }
     )
 

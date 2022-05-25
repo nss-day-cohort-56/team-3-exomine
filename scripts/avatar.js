@@ -10,7 +10,7 @@ export const avatarHTML = () => {
     else {
         for (const governor of governors) {
             if (governor.id === transient.selectedGovernor) {
-                html += `<img src="${governor.avatar}" alt="image"/> `
+                html += `<img class="pic" src="${governor.avatar}" alt="image"/> `
             }
         }
     }

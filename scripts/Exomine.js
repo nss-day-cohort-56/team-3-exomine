@@ -21,13 +21,19 @@ document.addEventListener(
 export const Exomine = () => {
     return `
         <header class="header">
-            <h1 class="title">Khajit's Mineral Emporium</h1>
+            <h1 class="title">😻Khajit's Mineral Emporium😻</h1>
         </header>
      <article class="top">
      <article class="choices">
-        <section class="choices__governors">
-              ${governorSelect()}
+     <section class="govatar">   
+     <section class="choices__governors">
+            ${governorSelect()}
         </section>
+        
+        <section class="avatar">
+            ${avatarHTML()}
+        </section>
+    </section>
         <section class="choices__facilities">
            ${facilitiesDropDown()}
         
@@ -41,19 +47,18 @@ export const Exomine = () => {
     </article>
     </article>
     <article class="bottom">
-    <article>
+    <article class="facilityMin">
         <section class="choices__minerals">
          ${facilityStockHTML()}
         </section>
     </article>
 
-    <article>
+    <article class="cartButton">
         <section class="cart">
         ${cartHTML()}
+        
         </section>
-
-            <button id="purchase">Purchase Selected Minerals</button>
+        <button id="purchase">Purchase Selected Minerals</button>
     </article>
-    ${avatarHTML()}
     `
 }
