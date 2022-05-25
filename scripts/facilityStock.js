@@ -31,19 +31,24 @@ export const facilityStockHTML = () => {
     const minerals = getMinerals()
     const filteredFacilityMinerals = mineralFacilities.filter(facilityMineral => facilityMineral.facilityId === transient.selectedFacility)
 
-    let html = "<h2>Facility Minerals</h2>"
-    html += ""
+    let html = ""
+    if (transient.selectedFacility === undefined) {
+        html += '<h2>Facility Minerals</h2>'
+    }
+    else if (transient.selectedFacilityName !== undefined) {
+        html += `<h2>Facility Minerals for ${transient?.selectedFacilityName}</h2>`
     const mineralStockArray = filteredFacilityMinerals.map(
         (facilityMineral) => {
             for (const mineral of minerals) {
                 if (facilityMineral.mineralId === mineral.id) {
                     if (facilityMineral.quantity !== 0) {
-                        return `<div> <input id="mineralOptions"type="radio" name"mineral" value="${facilityMineral.id}"/>${facilityMineral.quantity} tons of ${mineral.name} </div>`
+                        return `<div> <input id="mineralOptions"type="radio" name"mineral"  ${facilityMineral.id === transient.selectedMineral? "checked": "" } value="${facilityMineral.id}"/>${facilityMineral.quantity} tons of ${mineral.name} </div>`
                     }
                 }
             }
         })
     html += mineralStockArray.join("")
+    }
     // html += "</ul>"
     return html
 }
